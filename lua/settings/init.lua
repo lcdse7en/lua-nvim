@@ -1,6 +1,11 @@
 local set = vim.opt
 
+set.pumheight = 10
+-- set.t_Co = "256"
+set.clipboard = "unnamedplus"
+set.ruler = true
 set.number = true
+set.cmdheight = 2
 set.relativenumber = true
 set.autoindent = true
 set.tabstop = 4

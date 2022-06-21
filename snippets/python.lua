@@ -180,4 +180,4 @@ cs(-- Create Function in class snippets {{{
 
 -- End Refactoring --
 
-return snippets, autosnippets
+

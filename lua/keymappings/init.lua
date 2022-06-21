@@ -14,7 +14,8 @@ vim.g.mapleader = ' '
 -- Normal --
 -- map('n', '<leader>e', ':NvimTreeToggle<CR>', opts) -- <CR> means character return = enter
 map('n', '<F2>', ':NvimTreeToggle<CR>', opts) -- <CR> means character return = enter
-map('n', '<leader>q', ':q!<CR>', opts) -- <CR> means character return = enter
+-- map('n', '<leader>q', ':q!<CR>', opts) -- <CR> means character return = enter
+map('n', 'q', ':q!<CR>', opts) -- <CR> means character return = enter
 map('n', '<leader>sp', ':sp | term<CR>', opts) -- open terminal in horizontal split
 map('n', '<leader>vs', ':vs | term<CR>', opts) -- open terminal in vertical split
 
@@ -28,9 +29,17 @@ map('n', '<C-Down>', ':resize -2<CR>', opts)
 map('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 map('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
-map('n', '<C-s>', ':w<CR>', opts)
-map('n', '<A-s>', ':wq<CR>', opts)
+-- map('n', '<C-s>', ':w<CR>', opts)
+map('n', 'S', ':w<CR>', opts)
+map('n', 'Q', ':wq<CR>', opts)
 
+map('n', ',', ':', opts)
+
+map('n', '<leader>h', ':set hlsearch!<CR>', opts)
+
+-- Tab switch buffer
+map('n', '<TAB>', ':bnext<CR>', opts)
+map('n', '<S-TAB>', ':bprevious<CR>', opts)
 -- Navigate buffers
 -- map('n', '<S-l>', ':bnext<CR>', opts)
 -- map('n', '<S-h>', ':bprevious<CR>', opts)
