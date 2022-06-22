@@ -57,6 +57,17 @@ return require 'packer'.startup(function()
 	 -- Asynchronous command execution
     use({ "skywind3000/asyncrun.vim", opt = true, cmd = { "AsyncRun" } })
 
-	use ({'lukas-reineke/indent-blankline.nvim', opt = true})
-end)
+	use 'lukas-reineke/indent-blankline.nvim'
 
+	use 'kevinhwang91/nvim-hlslens'
+	use 'haya14busa/vim-asterisk'
+	use 'mg979/vim-visual-multi'
+	use 'gcmt/wildfire.vim'
+	use 'tpope/vim-surround'
+
+
+
+	
+
+	
+end)

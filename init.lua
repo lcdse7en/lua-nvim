@@ -18,6 +18,5 @@ require('autopairs-config')
 require('toggleterm-config')
 require('comment-config')
 require('which-key-config')
-require('indent-blankline-config')
+-- require('indent-blankline-config')
 -- require('null-ls-config')
-
