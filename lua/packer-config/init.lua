@@ -14,7 +14,8 @@ return require 'packer'.startup(function()
 	use 'rcarriga/nvim-notify' -- notify neovim message system optional
 	use 'nvim-lualine/lualine.nvim' -- lualine
 	use 'romgrk/barbar.nvim' -- barbar
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- treesitter
+	-- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- treesitter
+	use { 'nvim-treesitter/nvim-treesitter' } -- treesitter
 	use 'nvim-treesitter/nvim-treesitter-refactor' -- refactor based on treesitter
 	use {
 		'nvim-telescope/telescope.nvim',
@@ -29,5 +30,8 @@ return require 'packer'.startup(function()
 	end }
 
 	use 'jose-elias-alvarez/null-ls.nvim'
+
+	use 'folke/which-key.nvim'
+
 end)
 
