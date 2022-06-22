@@ -19,6 +19,8 @@ return require 'packer'.startup(function()
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- treesitter
 	-- use { 'nvim-treesitter/nvim-treesitter' } -- treesitter
 	use 'nvim-treesitter/nvim-treesitter-refactor' -- refactor based on treesitter
+	use {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}
+	use 'nvim-lua/popup.nvim'
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { { 'nvim-lua/plenary.nvim' } }

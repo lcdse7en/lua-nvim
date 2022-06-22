@@ -5,7 +5,7 @@ set.pumheight = 10
 set.clipboard = "unnamedplus"
 set.ruler = true
 set.number = true
-set.cmdheight = 2
+set.cmdheight = 1
 set.relativenumber = true
 set.autoindent = true
 set.tabstop = 4
@@ -29,6 +29,17 @@ set.termguicolors = true
 set.cursorline = true
 
 set.hidden = true
+
+set.completeopt = "menu,menuone,noselect"
+set.foldenable = false
+
+-- Highlight on yank
+vim.cmd([[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+  augroup end
+]])
 
 -- fold settings
 vim.wo.foldmethod = "expr"
@@ -56,3 +67,5 @@ end
 vim.opt.foldtext = 'v:lua.custom_fold_text()'
 vim.o.foldnestmax = 3
 vim.o.foldminlines = 2
+
+
