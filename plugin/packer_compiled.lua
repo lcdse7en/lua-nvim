@@ -133,6 +133,11 @@ _G.packer_plugins = {
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/gruvbox-material",
@@ -152,6 +157,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/tami5/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -218,15 +228,20 @@ _G.packer_plugins = {
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onedark.nvim"] = {
+  ["onedarkpro.nvim"] = {
     loaded = true,
-    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/navarasu/onedark.nvim"
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "https://github.com/olimorris/onedarkpro.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -242,6 +257,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -289,6 +309,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/wildfire.vim",
     url = "https://github.com/gcmt/wildfire.vim"
+  },
+  ["windline.nvim"] = {
+    loaded = true,
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/windline.nvim",
+    url = "https://github.com/windwp/windline.nvim"
   }
 }
 

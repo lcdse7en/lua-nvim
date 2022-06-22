@@ -27,7 +27,12 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = { 'pyright', 'sumneko_lua' }
+local servers = { 
+	'pyright', 
+	'tsserver',
+	'html',
+	-- 'sumneko_lua',
+}
 
 for _, lsp in pairs(servers) do
 	require('lspconfig')[lsp].setup {
@@ -39,5 +44,49 @@ for _, lsp in pairs(servers) do
 	}
 end
 
+-- setup for lua language server
+nvim_lsp.sumneko_lua.setup({
+    cmd = { "lua-language-server", "-E", "/usr/share/lua-language-server/main.lua" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            runtime = {
+                version = "LuaJIT",
+                path = vim.split(package.path, ";"),
+            },
+            diagnostics = {
+                globals = { "vim" },
+            },
+            workspace = {
+                library = {
+                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                    [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+                },
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
+})
 
+nvim_lsp.html.setup({
+    cmd = { "vscode-html-languageserver", "--stdio" },
+    filetypes = { "html", "htmldjango" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
+
+nvim_lsp.cssls.setup({
+    cmd = { "vscode-css-languageserver", "--stdio" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
+
+nvim_lsp.jsonls.setup({
+    cmd = { "vscode-json-languageserver", "--stdio" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
 

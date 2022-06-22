@@ -2,7 +2,7 @@ require 'notify'.setup(
 	{
 		-- background_colour = "Normal",
 		background_colour = "#2E3400",
-		fps = 30,
+		fps = 25,
 		icons = {
 			DEBUG = "",
 			ERROR = "",
@@ -15,9 +15,9 @@ require 'notify'.setup(
 		render = "minimal",
 		-- stages = "fade",
 		stages = "fade_in_slide_out",
-		timeout = 1500,
-		max_width = 30,
-		max_height = 6,
+		timeout = 5500,
+		max_width = 100,
+		max_height = 5,
 		border = "rounded",
 	}
 )

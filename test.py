@@ -1,9 +1,10 @@
-import pandas as pd
-print('lli')
-print('jl')
+import os
 
 
 
+n2 = 12
+for i in range(n2):
+    print(n2)
 
 
 
