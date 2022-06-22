@@ -1,12 +1,14 @@
 return require 'packer'.startup(function()
 	use 'wbthomason/packer.nvim'
-	use 'EdenEast/nightfox.nvim'
 	use 'kyazdani42/nvim-tree.lua'
 	use 'kyazdani42/nvim-web-devicons'
 
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
 	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+	use 'hrsh7th/cmp-nvim-lua' -- LSP source for nvim-cmp
+	use 'hrsh7th/cmp-path' -- LSP source for nvim-cmp
+	use 'hrsh7th/cmp-buffer' -- LSP source for nvim-cmp
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
 	use 'L3MON4D3/LuaSnip' -- Snippets plugin
 	use 'onsails/lspkind.nvim' -- VScode like pictograms to nvim-lsp builtin
@@ -33,5 +35,28 @@ return require 'packer'.startup(function()
 
 	use 'folke/which-key.nvim'
 
+
+    -- A list of colorscheme plugin you may want to try. Find what suits you.
+    use "lifepillar/vim-gruvbox8"
+    use "navarasu/onedark.nvim"
+    use "sainnhe/edge"
+    use "sainnhe/sonokai"
+    use "sainnhe/gruvbox-material"
+    use "shaunsingh/nord.nvim"
+    use "NTBBloodbath/doom-one.nvim"
+    use "sainnhe/everforest"
+    use "EdenEast/nightfox.nvim"
+    use "rebelot/kanagawa.nvim"
+
+	 -- Auto format tools
+    use "sbdchd/neoformat"
+
+	-- The missing auto-completion for cmdline!
+    use({"gelguy/wilder.nvim", opt = true, setup = [[vim.cmd('packadd wilder.nvim')]]})
+
+	 -- Asynchronous command execution
+    use({ "skywind3000/asyncrun.vim", opt = true, cmd = { "AsyncRun" } })
+
+	use ({'lukas-reineke/indent-blankline.nvim', opt = true})
 end)
 
