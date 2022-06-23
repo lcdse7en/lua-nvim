@@ -3,7 +3,11 @@ return require 'packer'.startup(function()
 	use 'kyazdani42/nvim-tree.lua'
 	use 'kyazdani42/nvim-web-devicons'
 
+	-- lspconfig
 	use 'neovim/nvim-lspconfig'
+	use 'williamboman/nvim-lsp-installer'
+
+	-- cmp completion and other enhence
 	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
 	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
 	use 'L3MON4D3/LuaSnip' -- Snippets plugin
@@ -16,9 +20,15 @@ return require 'packer'.startup(function()
 	use 'rcarriga/nvim-notify' -- notify neovim message system optional
 	use 'nvim-lualine/lualine.nvim' -- lualine
 	use 'romgrk/barbar.nvim' -- barbar
+
+	-- symbols outline
+	use 'simrat39/symbols-outline.nvim'
+
+	-- nvim-treesitter
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- treesitter
-	-- use { 'nvim-treesitter/nvim-treesitter' } -- treesitter
 	use 'nvim-treesitter/nvim-treesitter-refactor' -- refactor based on treesitter
+
+	-- telescope
 	use {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}
 	use 'nvim-lua/popup.nvim'
 	use {
@@ -26,6 +36,8 @@ return require 'packer'.startup(function()
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 	use 'nvim-telescope/telescope-media-files.nvim'
+
+
 	use 'windwp/nvim-autopairs'
 	use { "akinsho/toggleterm.nvim", config = function()
 		require("toggleterm").setup()

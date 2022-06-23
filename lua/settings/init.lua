@@ -68,4 +68,4 @@ vim.opt.foldtext = 'v:lua.custom_fold_text()'
 vim.o.foldnestmax = 3
 vim.o.foldminlines = 2
 
-
+vim.api.nvim_command(':filetype plugin on')

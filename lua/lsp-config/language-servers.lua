@@ -31,7 +31,7 @@ local servers = {
 	'pyright', 
 	'tsserver',
 	'html',
-	-- 'sumneko_lua',
+	'sumneko_lua',
 }
 
 for _, lsp in pairs(servers) do
@@ -71,12 +71,12 @@ nvim_lsp.sumneko_lua.setup({
     },
 })
 
-nvim_lsp.html.setup({
-    cmd = { "vscode-html-languageserver", "--stdio" },
-    filetypes = { "html", "htmldjango" },
-    on_attach = on_attach,
-    capabilities = capabilities,
-})
+-- nvim_lsp.html.setup({
+--     cmd = { "vscode-html-languageserver", "--stdio" },
+--     filetypes = { "html", "htmldjango" },
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+-- })
 
 nvim_lsp.cssls.setup({
     cmd = { "vscode-css-languageserver", "--stdio" },

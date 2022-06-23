@@ -23,13 +23,14 @@ require'nvim-treesitter.configs'.setup {
         "python",
         "comment",
     },
-	 sync_install = false,
-	 ignore_install = { "javascript" },
+	 ignore_install = {},
     -- auto tag with nvim-ts-autotag
+    highlight = {
+		-- enable = true,
+	},
+	indent = {enable=true},
     autotag = { enable = true },
- --    highlight = {
-	-- 	enable = true,
-	-- },
+	rainbow  = {enable = true},
     context_commentstring = {
         enable = true,
         enable_autocmd = false
@@ -37,16 +38,4 @@ require'nvim-treesitter.configs'.setup {
 }
 
 
-
-
-
-
--- require("nvim-treesitter").setup({
---   ensure_installed = {"python", "cpp", "lua", "vim"},
---   ignore_install = {}, -- List of parsers to ignore installing
---   highlight = {
---     enable = true, -- false will disable the whole extension
---     disable = {}, -- list of language that will be disabled
---   },
--- })
 

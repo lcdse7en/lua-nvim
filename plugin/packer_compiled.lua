@@ -203,6 +203,11 @@ _G.packer_plugins = {
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-hlslens",
     url = "https://github.com/kevinhwang91/nvim-hlslens"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -262,6 +267,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
