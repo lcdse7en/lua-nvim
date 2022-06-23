@@ -1,28 +1,10 @@
--- lua neovim packer configs
+require("plugins")
+require("mappings")
+require("options")
+require("autocmd")
 
-require('settings')
-require('keymappings')
-require('packer-config')
--- require('color-config.nightfox')
--- require('color-config.kanagawa')
-require('color-config.onedarkpro')
-require('nvim-tree-config')
-require('nvim-notify-config')
-require('lsp-config.language-servers')
-require('lsp-config.nvim-cmp')
-require('lsp-config.luasnip')
-require('lualine-config')
-require('barbar-config')
-require('treesitter-config')
-require('telescope-config')
-require('autopairs-config')
-require('toggleterm-config')
-require('comment-config')
-require('which-key-config')
-require('lspsaga-config')
-require('indent-blankline-config')
-require('gitsigns-config')
-require('windline-config')
--- require('null-ls-config')
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
+
 
 
