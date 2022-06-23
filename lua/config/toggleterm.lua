@@ -57,8 +57,3 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 	desc = "Mappings for navigation with a terminal",
 })
-
-
-
-
-

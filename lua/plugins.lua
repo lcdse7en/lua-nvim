@@ -67,7 +67,7 @@ packer.startup(function(use)
 
   use({ "windwp/nvim-autopairs", config = get_config("nvim-autopairs") })
 
-  use({
+	use({
     "nvim-treesitter/nvim-treesitter",
     config = get_config("treesitter"),
     run = ":TSUpdate",
@@ -76,6 +76,9 @@ packer.startup(function(use)
   use("nvim-treesitter/nvim-treesitter-textobjects")
 
   use("RRethy/nvim-treesitter-endwise")
+
+
+
 
   use({
     "hrsh7th/nvim-cmp",
@@ -143,7 +146,11 @@ packer.startup(function(use)
 
   use("famiu/bufdelete.nvim")
 
-  use({ "neovim/nvim-lspconfig", config = get_config("lsp") })
+
+  use({ "williamboman/nvim-lsp-installer" })
+  -- use({ "kabouzeid/nvim-lspinstall" })
+  -- use({ "neovim/nvim-lspconfig", config = get_config("lsp") })
+  use({ "neovim/nvim-lspconfig" })
 
   use({ "onsails/lspkind-nvim", requires = { "famiu/bufdelete.nvim" } })
 

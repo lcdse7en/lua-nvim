@@ -292,8 +292,12 @@ _G.packer_plugins = {
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
-    config = { 'require("config/lsp")' },
     loaded = true,
     path = "/home/se7en/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
@@ -544,50 +548,18 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: comment-box.nvim
-time([[Config for comment-box.nvim]], true)
-require("config/comment-box")
-time([[Config for comment-box.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
--- Config for: lf.vim
-time([[Config for lf.vim]], true)
-require("config/lf")
-time([[Config for lf.vim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("config/treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-notify
-time([[Config for nvim-notify]], true)
-require("config/notify")
-time([[Config for nvim-notify]], false)
--- Config for: fidget.nvim
-time([[Config for fidget.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
-time([[Config for fidget.nvim]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-require("config/project")
-time([[Config for project.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require("config/nvim-tree")
-time([[Config for nvim-tree.lua]], false)
--- Config for: specs.nvim
-time([[Config for specs.nvim]], true)
-require("config/specs")
-time([[Config for specs.nvim]], false)
--- Config for: mini.nvim
-time([[Config for mini.nvim]], true)
-require("config/mini")
-time([[Config for mini.nvim]], false)
--- Config for: catppuccin
-time([[Config for catppuccin]], true)
-require("config/catppuccin")
-time([[Config for catppuccin]], false)
+-- Config for: git-blame.nvim
+time([[Config for git-blame.nvim]], true)
+require("config/git-blame")
+time([[Config for git-blame.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("config/nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+require("config/luasnip")
+time([[Config for LuaSnip]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 require("config/which-key")
@@ -596,68 +568,96 @@ time([[Config for which-key.nvim]], false)
 time([[Config for Navigator.nvim]], true)
 require("config/navigator")
 time([[Config for Navigator.nvim]], false)
--- Config for: nvim-window.git
-time([[Config for nvim-window.git]], true)
-require("config/nvim-window")
-time([[Config for nvim-window.git]], false)
--- Config for: git-blame.nvim
-time([[Config for git-blame.nvim]], true)
-require("config/git-blame")
-time([[Config for git-blame.nvim]], false)
 -- Config for: Telegraph.nvim
 time([[Config for Telegraph.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14telegraph\frequire\0", "config", "Telegraph.nvim")
 time([[Config for Telegraph.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("config/nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: harpoon
-time([[Config for harpoon]], true)
-require("config/harpoon")
-time([[Config for harpoon]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("config/telescope")
-time([[Config for telescope.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require("config/alpha-nvim")
-time([[Config for alpha-nvim]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-require("config/todo")
-time([[Config for todo-comments.nvim]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
-require("config/luasnip")
-time([[Config for LuaSnip]], false)
--- Config for: twilight.nvim
-time([[Config for twilight.nvim]], true)
-require("config/twilight")
-time([[Config for twilight.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("config/cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: comment-box.nvim
+time([[Config for comment-box.nvim]], true)
+require("config/comment-box")
+time([[Config for comment-box.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require("config/alpha-nvim")
+time([[Config for alpha-nvim]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+require("config/catppuccin")
+time([[Config for catppuccin]], false)
+-- Config for: nvim-window.git
+time([[Config for nvim-window.git]], true)
+require("config/nvim-window")
+time([[Config for nvim-window.git]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+require("config/todo")
+time([[Config for todo-comments.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("config/telescope")
+time([[Config for telescope.nvim]], false)
+-- Config for: twilight.nvim
+time([[Config for twilight.nvim]], true)
+require("config/twilight")
+time([[Config for twilight.nvim]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require("config/notify")
+time([[Config for nvim-notify]], false)
+-- Config for: fidget.nvim
+time([[Config for fidget.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
+time([[Config for fidget.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("config/treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: lf.vim
+time([[Config for lf.vim]], true)
+require("config/lf")
+time([[Config for lf.vim]], false)
+-- Config for: mini.nvim
+time([[Config for mini.nvim]], true)
+require("config/mini")
+time([[Config for mini.nvim]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+require("config/project")
+time([[Config for project.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require("config/nvim-tree")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: harpoon
+time([[Config for harpoon]], true)
+require("config/harpoon")
+time([[Config for harpoon]], false)
+-- Config for: specs.nvim
+time([[Config for specs.nvim]], true)
+require("config/specs")
+time([[Config for specs.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file GrammarousCheck lua require("packer.load")({'vim-grammarous'}, { cmd = "GrammarousCheck", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ZenMode lua require("packer.load")({'zen-mode.nvim'}, { cmd = "ZenMode", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Neogit lua require("packer.load")({'neogit'}, { cmd = "Neogit", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file SymbolsOutline lua require("packer.load")({'symbols-outline.nvim'}, { cmd = "SymbolsOutline", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file GrammarousCheck lua require("packer.load")({'vim-grammarous'}, { cmd = "GrammarousCheck", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewOpen lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewOpen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewClose lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewClose", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewToggleFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewToggleFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ZenMode lua require("packer.load")({'zen-mode.nvim'}, { cmd = "ZenMode", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewFocusFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewFocusFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file DiffviewToggleFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewToggleFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file SymbolsOutline lua require("packer.load")({'symbols-outline.nvim'}, { cmd = "SymbolsOutline", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
+vim.cmd [[noremap <silent> <C-n> <cmd>lua require("packer.load")({'nvim-toggleterm.lua'}, { keys = "<lt>C-n>", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[noremap <silent> <leader>fl <cmd>lua require("packer.load")({'nvim-toggleterm.lua'}, { keys = "<lt>leader>fl", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[noremap <silent> <leader>gt <cmd>lua require("packer.load")({'nvim-toggleterm.lua'}, { keys = "<lt>leader>gt", prefix = "" }, _G.packer_plugins)<cr>]]
-vim.cmd [[noremap <silent> <C-n> <cmd>lua require("packer.load")({'nvim-toggleterm.lua'}, { keys = "<lt>C-n>", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
@@ -668,8 +668,8 @@ vim.cmd [[au FileType go ++once lua require("packer.load")({'go.nvim'}, { ft = "
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'lualine.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'gitsigns.nvim', 'indent-blankline.nvim', 'nvim-bufferline.lua'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'lualine.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
