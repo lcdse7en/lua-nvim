@@ -266,7 +266,7 @@ packer.startup(function(use)
 
   use({ "vimpostor/vim-tpipeline" })
 
-  use 'mg979/vim-visual-multi'
+  -- use 'mg979/vim-visual-multi'
   use 'gcmt/wildfire.vim'
   use 'tpope/vim-surround'
 
