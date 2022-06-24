@@ -72,3 +72,4 @@ require("bufferline").setup({
 		sort_by = "id",
 	},
 })
+

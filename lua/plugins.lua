@@ -79,27 +79,36 @@ packer.startup(function(use)
   use("RRethy/nvim-treesitter-endwise")
 
 
+-- lspconfig
 
-
+  use({ "williamboman/nvim-lsp-installer" })
+	use ({ "tami5/lspsaga.nvim" })
+  use({ "neovim/nvim-lspconfig" })
   use({
     "hrsh7th/nvim-cmp",
     requires = {
       "hrsh7th/cmp-nvim-lsp",
+			"onsails/lspkind-nvim",
       "hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-nvim-lua",
+			"octaltree/cmp-look",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
       "f3fora/cmp-spell",
       "hrsh7th/cmp-calc",
+      "hrsh7th/cmp-emoji",
       "lukas-reineke/cmp-rg",
       "hrsh7th/cmp-nvim-lsp-signature-help",
     },
     config = get_config("cmp"),
   })
 
-  use({ "rafamadriz/friendly-snippets" })
   use({
     "L3MON4D3/LuaSnip",
-    requires = "saadparwaiz1/cmp_luasnip",
+    requires = {
+			"saadparwaiz1/cmp_luasnip",
+			"rafamadriz/friendly-snippets"
+		},
     config = get_config("luasnip"),
   })
 
@@ -148,12 +157,6 @@ packer.startup(function(use)
   use("famiu/bufdelete.nvim")
 
 
-  use({ "williamboman/nvim-lsp-installer" })
-  -- use({ "kabouzeid/nvim-lspinstall" })
-  -- use({ "neovim/nvim-lspconfig", config = get_config("lsp") })
-	--use 'glepnir/lspsaga.nvim'
-	use ({ "tami5/lspsaga.nvim" })
-  use({ "neovim/nvim-lspconfig" })
 
   use({ "onsails/lspkind-nvim", requires = { "famiu/bufdelete.nvim" } })
 
@@ -268,23 +271,20 @@ packer.startup(function(use)
     end,
   })
 
-  -- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async", config = require("ufo").setup() })
 
-  -- use({ "https://gitlab.com/yorickpeterse/nvim-pqf.git", config = require("pqf").setup() })
 
-  use({ "Djancyp/cheat-sheet" })
-
-  use({ "vimpostor/vim-tpipeline" })
 
   -- use 'mg979/vim-visual-multi'
   use 'gcmt/wildfire.vim'
   use 'tpope/vim-surround'
 
+  use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async", config = require("ufo").setup() })
 
+ -- use({ "https://gitlab.com/yorickpeterse/nvim-pqf.git", config = require("pqf").setup() })
+
+  use({ "Djancyp/cheat-sheet" })
+
+  use({ "vimpostor/vim-tpipeline" })
 
 
 end)
-
--- TODO: ????
--- use {"lukas-reineke/headlines.nvim", config = get_config("headlines")}
--- https://github.com/glepnir/lspsaga.nvim

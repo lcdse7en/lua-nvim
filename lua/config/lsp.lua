@@ -88,7 +88,8 @@ for _, lsp in ipairs(servers) do
 				cmd = { "lua-language-server" },
 				filetypes = { "lua" },
 				runtime = {
-					version = "LuaJIT",
+					-- version = "LuaJIT",
+					version = "Lua5.3",
 				},
 				completion = { enable = true, callSnippet = "Both" },
 				diagnostics = {
@@ -156,8 +157,3 @@ for _, lsp in ipairs(servers) do
 		flags = { debounce_text_changes = 150 },
 	})
 end
-
-
-
-
-
