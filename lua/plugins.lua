@@ -9,6 +9,7 @@ local function get_config(name)
   return string.format('require("config/%s")', name)
 end
 
+
 -- bootstrap packer if not installed
 if fn.empty(fn.glob(install_path)) > 0 then
   fn.system({
@@ -150,6 +151,8 @@ packer.startup(function(use)
   use({ "williamboman/nvim-lsp-installer" })
   -- use({ "kabouzeid/nvim-lspinstall" })
   -- use({ "neovim/nvim-lspconfig", config = get_config("lsp") })
+	--use 'glepnir/lspsaga.nvim'
+	use ({ "tami5/lspsaga.nvim" })
   use({ "neovim/nvim-lspconfig" })
 
   use({ "onsails/lspkind-nvim", requires = { "famiu/bufdelete.nvim" } })
@@ -285,4 +288,3 @@ end)
 -- TODO: ????
 -- use {"lukas-reineke/headlines.nvim", config = get_config("headlines")}
 -- https://github.com/glepnir/lspsaga.nvim
--- use 'glepnir/lspsaga.nvim'

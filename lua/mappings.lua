@@ -92,11 +92,21 @@ map('n', '<A-c>', ':BufferClose<CR>', opts)
 --                 :BufferCloseBuffersRight<CR>
 -- Magic buffer-picking mode
 map('n', '<C-p>', ':BufferPick<CR>', opts)
--- Sort automatically by...
 map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
 map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 
+-- In lsp attach function
+map("n", "gr", "<cmd>Lspsaga rename<cr>", {silent = true, noremap = true})
+map("n", "gx", "<cmd>Lspsaga code_action<cr>", {silent = true, noremap = true})
+map("x", "gx", ":<c-u>Lspsaga range_code_action<cr>", {silent = true, noremap = true})
+map("n", "K",  "<cmd>Lspsaga hover_doc<cr>", {silent = true, noremap = true})
+map("n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", {silent = true, noremap = true})
+map("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", {silent = true, noremap = true})
+map("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {silent = true, noremap = true})
+map("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
+map("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
+
 -- telescope mappings
--- map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
--- map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
+map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
+map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
